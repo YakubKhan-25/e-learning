@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Satoshi-BoldItalic';
+    src: url('./fonts/Satoshi_Complete/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BoldItalic.ttf')
+
+  }
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.page1{
+    height: 100vh;
+    width: 100%;
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+}
+.main .page1 .navbar{
+
+    height: 83px;
+    /* height: 12%; */
+    width: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 5rem;
+}
+.navbar .img{
+    border-radius: 50%;
+    background-image: url("./public/images/logo.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+}
+ .navbar .rightnav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navbar .rightnav .signup{
+    color: white;
+    background-color: black;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
+}
+ .navbar .rightnav span{
+    position: relative;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    font-family:'Segoe UI', Tahoma;
+    z-index: 999;
+    padding: 0.3rem 1.1rem;
+    transition: 0.3s ease;
+}
+ .navbar .rightnav span:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-radius: 20px;
+    clip-path: circle(0% at 50% 99%);
+    transition: 0.7s ease;
+    transition-property: clip-path;
+}
+span:hover{
+    cursor: pointer;
+    color: white;
+    transform: translateY(-15px) scale(1.3);
+}
+.active{
+    filter: blur(0px);
+}
+.blur{
+    filter: blur(3px);
+}
+ .navbar .rightnav span:hover:before{
+    z-index: -3;
+    clip-path: circle(110% at 50% 89%);
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px white;
+}
+.navbar .rightnav span:active:before{
+    clip-path: circle(0% at 50% 99%);
+    transition: 0.4s ease;
+    transition-property: clip-path;
+    background-color: aqua;
+}
+.navbar .img:hover{
+    transition: 0.3s ease;
+    transform: scale(1.05);
+}
+
+
+.page1 .subpage1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.subpage1 .left{
+    height: 100%;
+    width: 50%;
+}
+.subpage1 .right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.page1 .page1footer{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .page1footer .left{
+    height: 100%;
+    width: 28%;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.page1footer .right{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 70px;
+    position: relative;
+    
+}
+.page1footer .right .card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.page1footer .right .line{
+    height: 70%;
+    width: 0.2%;
+    background-color: black;
+}
+.page1footer .right .card .cardnum{
+    font-size: 1.8rem;
+    
+}
+.page1footer .right .card .cardmsg{
+    font-size: 1.2rem;
+}
+
+.page1 .subpage1 .left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 3rem;
+}
+.page1 .subpage1 .left .up{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0 0.5rem 5rem;
+    font-family: 'Satoshi-BoldItalic';
+    font-size: 2rem;
+}
+.page1 .subpage1 .left .up .platform{
+    color: blue;
+}
+.page1 .subpage1 .left .middle{
+    width: 100%;
+    font-family: sans-serif;
+    text-align: start;
+    padding: 0 10rem 0 5rem;
+}
+.page1 .subpage1 .left .down{
+    margin-top: 20px;
+    padding: 1rem 1rem;
+    background-color: black;
+    color: white;
+    width: 25%;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    margin-left: 5rem;
+    font-family: sans-serif;
+}
+.page1 .subpage1 .right .one{
+    height: 320px;
+    width: 500px;
+    background-image: url("./public/images/main-image-one.jpg");
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+.page1 .subpage1 .right .two .img{
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    left: 0;
+    top: 60%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    background-image: url('./public/images/graph.jpg');
+}
+
+.page1 .subpage1 .right i{
+    position: absolute;
+}
+.page1 .subpage1 .right .first{
+    font-size: 3rem;
+    top: 15%;
+    right: 10%;
+    color: rgb(130, 198, 238);
+}
+.page1 .subpage1 .right .second{
+    font-size: 3rem;
+    top: 15%;
+    left: 0%;
+    color: rgb(4, 243, 44);
+}
+.page1 .subpage1 .right .third{
+    font-size: 3rem;
+    top: 90%;
+    right: 30%;
+    color: rgb(0, 8, 255);
+}
